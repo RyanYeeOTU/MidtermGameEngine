@@ -15,6 +15,8 @@ has the tag "green", and if so, sets a boolean which checks if the power up has 
 From this, Two rigidbodies are created, similarly to how the bullet is created, but instead of adding projectiles,
 the clones are added, each with the player controller scripts, allowing for movement and shooting.
 
+The enemy was treated similarly to the coin; however, it checks for a bullet collider, if it is detected, it will delete the game object. The enemy also has a directional light, which is also deleted upon the bullet detection, thereby changing the lighting.
+
 The issues I encountered were that the jump and movement were not exactly synced up, as jumping causes weird outcomes of anti-gravity.; however, basic spawning and functionality
 was added. I would try to fix this by attempting to constrain the movement of the player clones to line up with the actual player;
 additionally, I would have made it so the clones follow behind the player instead of side by side.
